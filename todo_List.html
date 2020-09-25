@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="todo.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List</title>
+  </head>
+  <body>
+    <div id='app'>
+      <div class="header">
+        <h1 class="name-of-header">To Do List</h1>
+        <div class="status">
+          <p>Status:</p>
+          <div class="name-of-status">
+            <p class="text-of-status">all</p>
+            <p class="text-of-status">during</p>
+            <p class="text-of-status">completed</p>
+          </div>
+        </div>
+      </div>
+      <div class="new-do">
+        <input type="text" class="input" id="form" /><button
+          class="button"
+          id="btn"
+        >
+          Добавить планы
+        </button>
+      </div>
+      <div class="table" id='doTable'>
+        <table class="to-do-table">
+          <tr>
+            <td class="do-list">Hello</td>
+            <td><button class="delete">&#10008</button></td>
+            <td><button class="complete">&#10004</button></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+  <style>
+    body {
+      font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+      background: url("img/Background.png") no-repeat;
+      background-size: cover;
+    }
+    .new-do {
+      color: #41413f;
+      padding-left: 400px;
+      display: flex;
+      height: 60px;
+    }
+    .button {
+      width: 200px;
+      font-size: 1.5rem;
+      margin-left: 50px;
+      background: #cccccc;
+      opacity: 0.8;
+      font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+      border-radius: 30px;
+    }
+
+    .input {
+      width: 400px;
+      text-align: center;
+      font-size: 1.5rem;
+      margin-left: 50px;
+      background: #faf5f5;
+      opacity: 0.8;
+      font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+      border-radius: 30px;
+    }
+
+    .header {
+      padding-left: 200px;
+      font-size: 2.5rem;
+      display: flex;
+    }
+
+    .status {
+      margin-left: 200px;
+      padding-top: 50px;
+      display: flex;
+    }
+    .name-of-status {
+      display: flex;
+    }
+
+    .text-of-status {
+      color: #808080;
+      padding-top: 20px;
+      font-size: 30px;
+      margin-left: 50px;
+    }
+
+    .table {
+      font-size: 30px;
+      color: #41413f;
+      background: rgba(250, 245, 245, 0.548);
+      margin-top: 30px;
+      margin-left: 200px;
+      border: white solid 2px;
+      margin-right: 600px;
+      border-radius: 30px;
+    }
+
+    .do-list {
+      padding-left: 300px;
+      text-align: center;
+    }
+    .delete {
+      font-weight: bold;
+      margin-left: 500px;
+      border-radius: 10px;
+    }
+
+    .complete {
+      color: rgb(65, 65, 63);
+      font-weight: bold;
+      border-radius: 10px;
+    }
+    .complete-do {
+      color: rgb(110, 110, 110);
+      text-decoration: line-through;
+    }
+  </style>
+</html>
