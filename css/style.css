@@ -1,7 +1,7 @@
 body {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  background: url("img/Background.png") no-repeat;
+  background: url("https://github.com/Oxxy-k/toDoList/blob/master/img/Background.png") no-repeat;
   background-size: cover;
 }
 .new-do {
