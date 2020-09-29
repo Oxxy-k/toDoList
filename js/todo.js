@@ -1,3 +1,5 @@
+const hfds=2;
+
 const getFilterActive = (toDoList) => toDoList.filter(({ status }) => !status);
 
 const getFilterCompleted = (toDoList) =>
