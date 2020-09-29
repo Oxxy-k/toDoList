@@ -24,17 +24,16 @@ const filterTodos = (todos, filter) =>
 };
 
 
-const inputNewTodo = `<form onsubmit="onNewAdd(this, event)" class="new-do" id='form'>
-                        <input name="status" type="checkbox" class="check" />
+const inputNewTodo = `  <input name="status" type="checkbox" class="check" />
                         <input
                           type="text"
                           placeholder="New todo"
                           name="title"
                           class="input"
                           /><button type="submit" class="button" id="btn">Добавить планы</button>
-                      </form>`;
+                     `;
 
-const nameOfStatus = `<div class="name-of-status" id='name-of-status'>
+const nameOfStatus = `
                           <button
                             class="text-of-status"
                             id="all"
@@ -56,7 +55,7 @@ const nameOfStatus = `<div class="name-of-status" id='name-of-status'>
                           >
                             completed
                           </button>
-                      </div>`;
+                      `;
 
 const render = ({ todos, editTodoId, filter }) => `
   ${filterTodos(todos, filter)
