@@ -17,8 +17,6 @@ const filterTodos = (todos, filter) =>
     ? getFilterCompleted(todos)
     : todos;
 
-const onSetFilter = (filter) => {
-  setState({ filter });
   const onSetFilter = (filter, id) => {
   setState({ filter });
   document.getElementById("name-of-status").innerHTML = nameOfStatus;
