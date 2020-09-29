@@ -21,6 +21,16 @@ const onSetFilter = (filter) => {
   setState({ filter });
 };
 
+const inputNewTodo = `<form onsubmit="onNewAdd(this, event)" class="new-do" id='form'>
+  <input name="status" type="checkbox" class="check" />
+  <input
+    type="text"
+    placeholder="New todo"
+    name="title"
+    class="input"
+    /><button type="submit" class="button" id="btn">Добавить планы</button>
+</form>`;
+
 const render = ({ todos, editTodoId, filter }) => `
   ${filterTodos(todos, filter)
     .map((todo) =>
@@ -108,6 +118,7 @@ const onNewAdd = (formElement, event) => {
     status: formData.status === "on",
   };
   setState({ todos: addTodo(state.todos, newData) });
+  document.getElementById("form").innerHTML = inputNewTodo;
 };
 const getForm = (formElement) => {
   const formData = new FormData(formElement);
