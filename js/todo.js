@@ -38,21 +38,21 @@ const nameOfStatus = `<div class="name-of-status" id='name-of-status'>
                           <button
                             class="text-of-status"
                             id="all"
-                            onclick="onSetFilter('all', 'all')"
+                            onclick="onSetFilter('all')"
                           >
                             all
                           </button>
                           <button
                             class="text-of-status"
-                            id="during"
-                            onclick="onSetFilter('active', 'during')"
+                            id="active"
+                            onclick="onSetFilter('active')"
                           >
                             active
                           </button>
                           <button
                             class="text-of-status"
                             id="completed"
-                            onclick="onSetFilter('completed', 'completed')"
+                            onclick="onSetFilter('completed')"
                           >
                             completed
                           </button>
