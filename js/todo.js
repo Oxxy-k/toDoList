@@ -1,5 +1,3 @@
-const dfa=1;
-
 const getFilterActive = (todoList) => todoList.filter(({ status }) => !status);
 
 const getFilterCompleted = (todoList) =>
