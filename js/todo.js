@@ -17,10 +17,10 @@ const filterTodos = (todos, filter) =>
     ? getFilterCompleted(todos)
     : todos;
 
-  const onSetFilter = (filter, id) => {
+  const onSetFilter = (filter) => {
   setState({ filter });
   document.getElementById("name-of-status").innerHTML = nameOfStatus;
-  document.getElementById(`${id}`).style.background = "#7a7a7a";
+  document.getElementById(`${filter}`).style.background = "#7a7a7a";
 };
 
 
