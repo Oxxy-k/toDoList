@@ -143,9 +143,14 @@ const onNewAdd = (formElement, event) => {
     title: formData.title,
     status: formData.status === "on",
   };
-  setState({ todos: addTodo(state.todos, newData) });
-  document.getElementById("form").innerHTML = inputNewTodo;
+  if (formData.title) {
+    setState({ todos: addTodo(state.todos, newData) });
+    document.getElementById("form").innerHTML = inputNewTodo;
+  } else {
+    setState(state.todos);
+  }
 };
+
 const getForm = (formElement) => {
   const formData = new FormData(formElement);
   const data = {};
