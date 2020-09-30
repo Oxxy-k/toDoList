@@ -107,3 +107,14 @@ body {
   opacity: 0.9;
   cursor: pointer;
 }
+.do-list-input {
+  margin-left: 40px;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-left: 50px;
+  background: #faf5f5;
+  opacity: 0.8;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  border-radius: 30px;
+}
