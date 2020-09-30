@@ -133,8 +133,8 @@ function toggleStatusTodo(todoList, todoId) {
   );
 }
 
-const changeNameTodo = (todoList, todoId, name) =>
-  todoList.map((todo) => (todo.id === todoId ? { ...todo, name } : todo));
+const changeNameTodo = (todoList, todoId, title) =>
+  todoList.map((todo) => (todo.id === todoId ? { ...todo, title } : todo));
 
 const onNewAdd = (formElement, event) => {
   event.preventDefault();
@@ -170,4 +170,15 @@ const onChangeStatusTodo = (todoId) => {
   setState({
     todos: toggleStatusTodo(state.todos, todoId),
   });
+};
+const onSaveTitle = (formElement, event, todoId) => {
+  event.preventDefault();
+  const formData = getForm(formElement);
+  if (formData.title) {setState({
+    todos: changeNameTodo(state.todos, todoId, formData.title),
+    editTodoId: null,
+  });}
+  else {
+    setState(state.todos);
+  }
 };
