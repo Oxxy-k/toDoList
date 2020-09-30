@@ -79,9 +79,12 @@ const render = ({ todos, editTodoId, filter }) => `
       <td><button class="complete" id='complete' onclick='onChangeStatusTodo(${
         todo.id
       })')'>&#10004</button></td>
+      <td><button class="edit" id='edit' onclick='onEditTodo(${
+        todo.id
+      })'>&#9998</button></td>
       <td class="do-list ${todo.status ? ` complete-do"` : `"`}
         >${todo.title}</td>
-    </tr>`,
+    </tr>`
     )
     .join(" ")}
     `;
