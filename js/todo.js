@@ -63,9 +63,12 @@ const render = ({ todos, editTodoId, filter }) => `
       todo.id === editTodoId
         ? `
     <tr>
-      <td><button class="delete" id='delete' onclick='onRemoveTodo(${todo.id})'>&#10008</button></td>
-      <td><button class="complete" id='complete' onclick='onChangeStatusTodo(${todo.id})'>&#10004</button></td>
-      <td name='title' type='text' class="do-list">${todo.title}</td>
+        <td>
+        <form onsubmit='onSaveTitle(this, event, ${todo.id})'>
+        <input name='title' type='text' class="do-list-input" value='${todo.title}'/>
+        <button type='submit' class="complete" id='complete'>&#10004</button>
+        </form>
+        </td>
     </tr>
         `
         : `
