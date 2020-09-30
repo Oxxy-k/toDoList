@@ -17,12 +17,11 @@ const filterTodos = (todos, filter) =>
     ? getFilterCompleted(todos)
     : todos;
 
-  const onSetFilter = (filter) => {
+const onSetFilter = (filter) => {
   setState({ filter });
   document.getElementById("name-of-status").innerHTML = nameOfStatus;
   document.getElementById(`${filter}`).style.background = "#7a7a7a";
 };
-
 
 const inputNewTodo = `  <input name="status" type="checkbox" class="check" />
                         <input
@@ -138,7 +137,7 @@ const deleteTodo = (todoList, todoId) =>
 
 function toggleStatusTodo(todoList, todoId) {
   return todoList.map((item) =>
-    item.id === todoId ? { ...item, status: !item.status } : item,
+    item.id === todoId ? { ...item, status: !item.status } : item
   );
 }
 
@@ -183,11 +182,12 @@ const onChangeStatusTodo = (todoId) => {
 const onSaveTitle = (formElement, event, todoId) => {
   event.preventDefault();
   const formData = getForm(formElement);
-  if (formData.title) {setState({
-    todos: changeNameTodo(state.todos, todoId, formData.title),
-    editTodoId: null,
-  });}
-  else {
+  if (formData.title) {
+    setState({
+      todos: changeNameTodo(state.todos, todoId, formData.title),
+      editTodoId: null,
+    });
+  } else {
     setState(state.todos);
   }
 };

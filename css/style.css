@@ -12,6 +12,7 @@ body {
 }
 
 .button {
+  outline: none !important;
   width: 200px;
   font-size: 1.5rem;
   margin-left: 50px;
@@ -23,6 +24,7 @@ body {
 }
 
 .input {
+  outline: none !important;
   width: 400px;
   text-align: center;
   font-size: 1.5rem;
@@ -50,6 +52,7 @@ body {
 }
 
 .text-of-status {
+  outline: none !important;
   color: #070707;
   padding-top: 10px;
   font-size: 30px;
@@ -82,17 +85,20 @@ body {
   text-align: center;
 }
 .delete {
+  outline: none !important;
   font-weight: bold;
   margin-left: 70px;
   border-radius: 10px;
 }
 
 .complete {
+  outline: none !important;
   color: rgb(65, 65, 63);
   font-weight: bold;
   border-radius: 10px;
 }
 .edit {
+  outline: none !important;
   color: rgb(65, 65, 63);
   font-weight: bold;
   border-radius: 10px;
@@ -109,6 +115,7 @@ body {
   cursor: pointer;
 }
 .do-list-input {
+  outline: none !important;
   margin-left: 40px;
   text-align: center;
   font-size: 1.5rem;
