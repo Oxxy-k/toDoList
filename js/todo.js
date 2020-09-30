@@ -63,6 +63,9 @@ const render = ({ todos, editTodoId, filter }) => `
       todo.id === editTodoId
         ? `
     <tr>
+        <td></td>
+        <td></td>
+        <td></td>
         <td>
         <form onsubmit='onSaveTitle(this, event, ${todo.id})'>
         <input name='title' type='text' class="do-list-input" value='${todo.title}'/>
